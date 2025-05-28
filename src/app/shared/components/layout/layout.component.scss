@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #182541; /* fondo azul oscuro */
+  color: #333;
+}
+
+.content-wrapper {
+  flex: 1; /* para que tome todo el espacio entre header y footer */
+  display: flex;
+  justify-content: center; /* centrar horizontalmente */
+  padding: 20px 20px 40px; /* arriba, horizontal y abajo un poco más para separar del footer */
+  background-color: #182541;
+}
+
+.content-box {
+  background-color: white;
+  width: 100%;
+  max-width: 900px; /* ancho máximo fijo */
+  padding: 30px;
+  border-radius: 12px;
+  
+  /* Sombra para efecto profundidad 3D */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  /* Sin altura mínima, crece según el contenido */
+  /* Por defecto el height es auto, no hace falta ponerlo */
+}
+
+.content-box:hover {
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
